@@ -1,0 +1,307 @@
+:root{
+    --mainColor: #d6d5d5;
+    --secondryColor: #ffffff
+
+    --borderColor: #858481;
+
+    --mainText: black;
+    --secondryText : #4b5156:
+
+    --themeDotBorder : #24292e
+}
+
+
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+/*This is to make sure all these tags have the same properties*/
+h1,h2,h3,h4,h5,h6,strong{
+    color: var(--mainText);
+    font-family: 'Oleo Script', cursive;
+}
+
+/* setting font size of every html headings tag*/
+a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul{
+    list-style: none;
+    /* list style none means there will be no bullets for the list elements. We are doing this because we will use lists for navbar */
+}
+
+h1{font-size: 56px;}
+h2{font-size: 56px;}
+h3{font-size: 35px;}
+h4{font-size: 30px;}
+h5{font-size: 25px;}
+h6{font-size: 56px;}
+
+
+/*This is to make sure all these tags have the same properties*/
+p,li,span,label,input,textarea{
+    color: var(--mainText);
+    font-family: 'Pacifico', cursive;
+    font-weight: 500;
+}
+
+/* Here we are editing the Sections*/
+.s1{
+    background-color: #d6d5d5;
+    border-bottom: 1px solid var(--borderColor) ;
+    overflow: auto;
+    
+}
+
+
+/*This t=for the greeting-wrapper grid*/
+.greeting-wrapper{
+    display: grid;  /* This showed that we are using a grid*/
+    text-align: center;/* This will Center the greeting Horizontaly */
+    align-content: center;/* This will center the greeting Vwertically */
+    min-height: 10em;/*Height of the Box*/
+
+}
+
+.intro-wrapper{
+    background-color: var(--secondryColor);
+    border: 1px solid var(--borderColor); 
+    border-radius: 6px 6px 0 0 ; 
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);  
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column';
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-bottom: 2px solid var;
+    display: flex;/*This will create a row of 'navnav' on the navigation*/
+    justify-content: space-between;/* This will put one nav in left and other in the right */
+    align-items: center;
+    background-color: #d6d5d5;
+}
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+
+}
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.dot-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+#dot-1{
+    background-color: #FC6058;
+
+}
+
+#dot-2{
+    background-color: #fec02f;
+    
+}
+#dot-3{
+    background-color: #2aca3e;
+    
+}
+
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+
+.left-column{
+    grid-area: left-column;
+    background-color: white;
+    text-align: center;
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;/*We do this so that no matter what the size of image is, CSS won't distort it infact it will try to fit it in that size*/
+    border: 2px solid var(--borderColor);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid black;
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+#setting-note{
+    font-size: 12px;
+    font-style: italic;
+    
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: white;
+}
+
+#blue-mode{
+    background-color: #192734;
+}
+
+#green-mode{
+    background-color: #78866b;
+}
+
+#purple-mode{
+    background-color: #7e4c74;
+}
+
+.right-column{
+    grid-area: right-column;
+    background-color: white;
+    display: grid;
+    align-content: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+#preview-shadow{
+    background-color: hsl(26, 100%, 83%);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview{
+    width: 300px;
+    height: 200px;
+    border: 1.5px solid #17a2b8;
+    padding: 15px;
+    background-color: rgba(251, 249, 243, 0.8)
+}
+
+.s2{
+    background-color: var(--mainColor);
+    border-bottom: 3px solid var(--borderColor) ;
+    overflow: auto;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.about-wrapper{
+    display: grid;
+    
+    /*grid-template-areas: 'about-me'
+                         'social-links';*/
+}
+
+.about-me{
+    text-align: center;
+    align-content: center;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: burlywood;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.social-links{
+    grid-area: social-links;
+}
+
+/*Refer video again for this*/
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }   
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column';
+    }
+    .right-column{
+        justify-content: center;
+    }
+}
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #858481;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: black ;
+    border: none;
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid ;
+    font-size: 14px;
+}
