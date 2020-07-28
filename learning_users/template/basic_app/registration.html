@@ -1,0 +1,20 @@
+{% extends 'basic_app/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+    {% if registered %}
+        <h1>Thanks for Registering</h1>
+    {% else %}
+        <h1>Please Fill the form here</h1>
+<!-- using enctype because without it won't be able upload the prolife picture -->
+        <form enctype="multipart/form-data" method="POST" >
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
